@@ -1,0 +1,22 @@
+{
+  "name": "lax-cerberus-chamber1-identity",
+  "version": "1.0.0",
+  "description": "Cerberus chamber 1: prove a bidding agent controls its LAX listing with an EIP-191 challenge. Pure TypeScript, no network.",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.38.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^3.2.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
