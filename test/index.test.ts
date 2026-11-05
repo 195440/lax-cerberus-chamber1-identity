@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { privateKeyToAccount } from "viem/accounts";
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
 import {
   CHALLENGE_TTL_MS,
   MAX_TTL_MS,
@@ -10,13 +10,9 @@ import {
   type Challenge,
 } from "../src/index.js";
 
-// Fixed public test keys of local Ethereum dev chains (anvil accounts 0 and 1). Never fund them.
-const owner = privateKeyToAccount(
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
-);
-const stranger = privateKeyToAccount(
-  "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
-);
+// Throwaway keys made fresh on every run: no key material is stored in this repository.
+const owner = privateKeyToAccount(generatePrivateKey());
+const stranger = privateKeyToAccount(generatePrivateKey());
 
 const NOW = Date.parse("2026-10-27T12:00:00.000Z");
 const DID = "did:pkh:eip155:8453:0x8cc9bd34b5ee8e828C54b84d0520CdCF4FA9C078";

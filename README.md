@@ -89,5 +89,6 @@ verdict every time, with challenges verifying in both directions.
 ## House rules
 
 - No secrets in this repository. The test keys in `test/index.test.ts` are
-  public well known development keys; never fund them.
+  generated fresh on every run (`generatePrivateKey`); no key material is
+  stored.
 - Latin digits only, no long dashes in user facing text.
